@@ -1,3 +1,5 @@
+-- To update NULL values with correct values in column OwnerName
+
 Select * From [Practice Database]..NashvilleHousing
 BEGIN TRANSACTION
 Update [Practice Database]..NashvilleHousing
@@ -45,9 +47,13 @@ Where YearBuilt is NOT NULL
 Group By YearBuilt
 Order By YearBuilt ASC
 
+-- To show different types of Land Use with their Count.
+
 Select DISTINCT(LandUse), Count(LandUse) from [Practice Database]..NashvilleHousing
 Group By LandUse
 Order By LandUse ASC
+
+-- City wise number of properties within Nashville District
 
 Select DISTINCT(PropertySplitCity) , Count(PropertySplitCity) from [Practice Database]..NashvilleHousing
 Group By PropertySplitCity
